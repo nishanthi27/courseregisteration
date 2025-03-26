@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Course</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            text-align: center;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            width: 400px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(255, 65, 108, 0.4);
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 65, 108, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add a New Course</h1>
+        <form action="http://localhost:8080/course/details" method="post">
+            <label for="courseid">Course ID:</label>
+            <input type="text" name="courseid" required>
+
+            <label for="coursename">Course Name:</label>
+            <input type="text" name="coursename" required>
+
+            <label for="coursetrainer">Course Trainer:</label>
+            <input type="text" name="coursetrainer" required>
+
+            <label for="courseduration">Course Duration (weeks):</label>
+            <input type="number" name="courseduration" required>
+
+            <button type="submit">Add Course</button>
+        </form>
+    </div>
+</body>
+</html>

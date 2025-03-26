@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Courses</title>
+    <script type="text/javascript" src="myscript.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #4CAF50;
+            color: white;
+            font-size: 16px;
+        }
+
+        td {
+            background-color: #f9f9f9;
+            font-size: 14px;
+        }
+
+        tr:hover td {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color: white;">Available Courses</h2>
+    <table>
+        <tr>
+            <th>Course Id</th>
+            <th>Course Name</th>
+            <th>Trainer</th>
+            <th>Duration (weeks)</th>
+        </tr>
+        <tbody id="coursetable"></tbody> <!--Table body where rows will be inserted -->
+    </table>
+
+    <script type="text/javascript">
+        window.onload = function(){
+            showCourses();
+        };
+    </script>
+</body>
+</html>
